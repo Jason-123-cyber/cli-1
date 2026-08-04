@@ -21,11 +21,11 @@ matching entry in `allowScripts`, and end with a list of the packages
 whose scripts were skipped so you can review them with this command.
 
 This command only works inside a project that has a `package.json`. Running
-it with `--global` (`-g`) fails with an `EGLOBAL` error, since global
+it with `--global` (`-g esbuild`) fails with an `EGLOBAL` error, since global
 installs (`npm install -g`) and one-off executions (`npm exec` / `npx`) have
 no project `package.json` to write to. To allow install scripts in those
 contexts, use the `--allow-scripts` flag at install time (for example
-`npm install -g canvas sharp --allow-scripts=canvas,sharp`) or persist the
+`npm install -g esbuild --allow-scripts=esbuild`) or persist the
 setting with `npm config set allow-scripts=canvas,sharp --location=user`.
 
 There are three modes:
